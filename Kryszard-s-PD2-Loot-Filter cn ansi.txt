@@ -895,7 +895,6 @@ ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%
 ItemDisplay[(RW OR CRAFT OR (ID (MAG OR RARE OR SET OR UNI))) NORM]: %NAME%¡¾ÆÕ¡¿%CONTINUE%
 ItemDisplay[(RW OR CRAFT OR (ID (MAG OR RARE OR SET OR UNI))) EXC]: %NAME%¡¾À©¡¿%CONTINUE%
 ItemDisplay[(RW OR CRAFT OR (ID (MAG OR RARE OR SET OR UNI))) ELT]: %NAME%¡¾¾«¡¿%CONTINUE%
-ItemDisplay[SET NORM (CLVL>49 OR FILTLVL>0)]: {%NAME%}%CONTINUE%
 
 //Add red "*" Stars on Corrupted items in Unique Stygian Caverns Map
 ItemDisplay[(ARMOR OR WEAPON OR (aqv OR cqv OR rin OR amu)) (MAG OR RARE OR SET OR UNI OR CRAFT) !ID (MAPID=181 OR MAPID=182)]: %RED%*%NAME%%RED%*%CONTINUE%
