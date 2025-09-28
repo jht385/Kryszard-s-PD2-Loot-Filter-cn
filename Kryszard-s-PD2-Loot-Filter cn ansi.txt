@@ -2446,10 +2446,9 @@ ItemDisplay[mp1]: %BLUE%!%WHITE%minor mp{%WHITE%Minor Mana Potion}%CONTINUE%
 ItemDisplay[mp2]: %BLUE%!%WHITE%light mp{%WHITE%Light Mana Potion}%CONTINUE%
 ItemDisplay[mp3]: %BLUE%!%WHITE%mana{%WHITE%Mana Potion}%CONTINUE%
 ItemDisplay[mp4]: %BLUE%!%WHITE%great mp{%WHITE%Greater Mana Potion}%CONTINUE%
-
-ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) (FILTLVL>0 OR CLVL>19) !SHOP]: {%NAME%}
-ItemDisplay[(hp4 OR mp4) FILTLVL>0 CLVL>29 !SHOP]: {%NAME%}
-ItemDisplay[(hp5 OR mp5) FILTLVL>0 CLVL>49 !SHOP]: {%NAME%}
+ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) ((FILTLVL>0 DIFF>0) OR (FILTLVL=3 OR FILTLVL=5 OR FILTLVL>6)) !SHOP]: {%NAME%}
+ItemDisplay[(hp4 OR mp4) ((FILTLVL>0 DIFF>1) OR (FILTLVL=3 OR FILTLVL=5 OR FILTLVL>6)) !SHOP]: {%NAME%}
+ItemDisplay[(hp5 OR mp5) (FILTLVL=3 OR FILTLVL=5 OR FILTLVL>6) !SHOP]: {%NAME%}
 
 //Utilites
 ItemDisplay[tsc]: %BLUE%* %GRAY%tp %WHITE%scroll{%RED%Warning%WHITE%: You gonna lose socketed Runes/Gems/Jewels%NL%Socketed Item, %BLUE%* %GRAY%tp %WHITE%scroll, %ORANGE%Hel%NL%%TAN%Note%WHITE%: To remove Runes/Gems/Jewels from Item:%NL%Scroll of Town Portal}%CONTINUE%
@@ -3345,7 +3344,7 @@ ItemDisplay[SET !ID (FILTLVL<4 OR (CLVL<80 AND FILTLVL<6))]: %PX-84%%NAME%%CONTI
 ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%r%ORANGE%a%YELLOW%in%GREEN%b%BLUE%o%PURPLE%w     %NAME%%PURPLE%     r%BLUE%a%GREEN%in%YELLOW%b%ORANGE%o%RED%w
 
 //Highlight Good Magic items
-ItemDisplay[jew MAG !ID FILTLVL>0 (ILVL<40 AND LVLREQ<18)]: {%NAME%}%CONTINUE%
+ItemDisplay[jew MAG !ID FILTLVL>3 (ILVL<40 AND LVLREQ<18)]: {%NAME%}%CONTINUE%
 ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %NAME%%WHITE%   *%TAN%*%BLUE%
 
 //Highlight Good Rare items
