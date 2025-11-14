@@ -2437,7 +2437,7 @@ ItemDisplay[ETH OR (DIN NMAG !RW RES>0) OR (DIN NMAG !RW EDAM>0) OR ((AMASTAFF O
 //Health & Mana & Rejuvenation Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full{%WHITE%Full Rejuvenation Potion}%CONTINUE%
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R%WHITE% Full%NL%%TAN% Note%WHITE%: Crafting Recipes:%NL%Rejuvenation Potion}%CONTINUE%
-ItemDisplay[rvs (FILTLVL>0 OR CLVL>49)]: {%NAME%}%CONTINUE%
+ItemDisplay[rvs FILTLVL>7]: {%NAME%}%CONTINUE%
 ItemDisplay[hp5]: %RED%!%WHITE%Hp{%WHITE%Super Healing Potion}%CONTINUE%
 ItemDisplay[mp5]: %BLUE%!%WHITE%Mp{%WHITE%Super Mana Potion}%CONTINUE%
 ItemDisplay[hp1]: %RED%!%WHITE%minor hp{%WHITE%Minor Healing Potion}%CONTINUE%
@@ -2458,9 +2458,7 @@ ItemDisplay[isc]: %RED%* %GRAY%id %WHITE%scroll{%WHITE%Scroll of Identify}%CONTI
 ItemDisplay[vps]: %GREEN%!%WHITE%stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina%NL%Stamina Potion}%CONTINUE%
 ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GREEN%!%WHITE%thaw, Perf %BLUE%O%WHITE%, %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character%NL%Thawing Potion}%CONTINUE%
 ItemDisplay[(tsc OR isc OR vps OR wms) (CLVL>19 OR FILTLVL>0) !SHOP]: {%NAME%}%CONTINUE%
-ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison%NL%Antidote Potion}%CONTINUE%
-ItemDisplay[yps (CLVL>19 OR FILTLVL>0) !SHOP]: {%NAME%}
-
+ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison%NL%Antidote Potion}
 
 //keys
 ItemDisplay[key]: %GRAY%key%CONTINUE%
@@ -3135,9 +3133,9 @@ ItemDisplay[rkey (TOWN)]: %NAME%{%CORAL%Pathfinding%WHITE%/%TEAL%Map Reading %WH
 
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
-ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>4) !SHOP]:
-ItemDisplay[cqv MAG !ID FILTLVL>0 CLVL>9 (ILVL<25 OR LVLREQ<18)]:
-ItemDisplay[aqv MAG !ID FILTLVL>0 CLVL>9 (ILVL<25 OR LVLREQ<18)]:
+ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>5) !SHOP]:
+ItemDisplay[cqv MAG !ID FILTLVL>5 LVLREQ<45]:
+ItemDisplay[aqv MAG !ID FILTLVL>5 LVLREQ<45]:
 ItemDisplay[(aqv OR cqv) RARE AMAZON !ID]: %DOT-A8%%TIER-7%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling, and New PD2 Throwing Potions
@@ -3188,7 +3186,7 @@ ItemDisplay[RUNE~20-25]: %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]{%N
 ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 
 //All Charms
-ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID FILTLVL>0 CLVL>49 (ILVL<40 AND LVLREQ<21)]: {%NAME%}%CONTINUE%
+ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID FILTLVL>0 CLVL>49 LVLREQ<21]: {%NAME%}%CONTINUE%
 ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 ItemDisplay[cm2 MAG !ID FILTLVL<6]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 ItemDisplay[cm2 MAG !ID FILTLVL>5]: %DOT-1C%%PX-9B%%TIER-5%%GRAY%*%BLUE%   %NAME%   %GRAY%*
@@ -3416,10 +3414,10 @@ ItemDisplay[BAR BARBARIAN RARE !ID]: %NAME%
 ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN RARE !ID]: %NAME%
 
 //Hide Magic Ring and Amulets on Super Strict Level
-ItemDisplay[(rin OR amu) MAG !ID FILTLVL>0 CLVL>19 (ILVL<40 OR LVLREQ<40)]: {%NAME%}
+ItemDisplay[(rin OR amu) MAG !ID FILTLVL>7 (ILVL<90 LVLREQ<45)]: {%NAME%}
 
 //Circlets
-ItemDisplay[CIRC MAG !ID FILTLVL>0 (ILVL<40 OR LVLREQ<40)]: {%NAME%}
+ItemDisplay[CIRC MAG !ID FILTLVL>7 LVLREQ<45]: {%NAME%}
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
 
 //Rare Gloves, Belts and Boots
