@@ -2458,7 +2458,8 @@ ItemDisplay[isc]: %RED%* %GRAY%id %WHITE%scroll{%WHITE%Scroll of Identify}%CONTI
 ItemDisplay[vps]: %GREEN%!%WHITE%stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina%NL%Stamina Potion}%CONTINUE%
 ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GREEN%!%WHITE%thaw, Perf %BLUE%O%WHITE%, %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character%NL%Thawing Potion}%CONTINUE%
 ItemDisplay[(tsc OR isc OR vps OR wms) (CLVL>19 OR FILTLVL>0) !SHOP]: {%NAME%}%CONTINUE%
-ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison%NL%Antidote Potion}
+ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison%NL%Antidote Potion}%CONTINUE%
+ItemDisplay[yps (CLVL>19 OR FILTLVL>0) !(MAPID>160 MAPID<164) !SHOP]: {%NAME%}
 
 //keys
 ItemDisplay[key]: %GRAY%key%CONTINUE%
@@ -3186,7 +3187,7 @@ ItemDisplay[RUNE~20-25]: %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]{%N
 ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 
 //All Charms
-ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID FILTLVL>0 CLVL>49 LVLREQ<21]: {%NAME%}%CONTINUE%
+ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID FILTLVL>0 CLVL>49 (ILVL<40 LVLREQ<21)]: {%NAME%}
 ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 ItemDisplay[cm2 MAG !ID FILTLVL<6]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 ItemDisplay[cm2 MAG !ID FILTLVL>5]: %DOT-1C%%PX-9B%%TIER-5%%GRAY%*%BLUE%   %NAME%   %GRAY%*
