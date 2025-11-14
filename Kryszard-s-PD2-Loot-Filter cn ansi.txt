@@ -2457,7 +2457,7 @@ ItemDisplay[tsc]: %BLUE%* %GRAY%tp %WHITE%scroll{%RED%Warning%WHITE%: You gonna 
 ItemDisplay[isc]: %RED%* %GRAY%id %WHITE%scroll{%WHITE%Scroll of Identify}%CONTINUE%
 ItemDisplay[vps]: %GREEN%!%WHITE%stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina%NL%Stamina Potion}%CONTINUE%
 ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GREEN%!%WHITE%thaw, Perf %BLUE%O%WHITE%, %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character%NL%Thawing Potion}%CONTINUE%
-ItemDisplay[(tsc OR isc OR vps OR wms) (CLVL>19 OR FILTLVL>0) !SHOP]: {%NAME%}%CONTINUE%
+ItemDisplay[(tsc OR isc OR vps OR wms) FILTLVL>0 (CLVL>19 OR FILTLVL>5) !SHOP]: {%NAME%}%CONTINUE%
 ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison%NL%Antidote Potion}%CONTINUE%
 ItemDisplay[yps (CLVL>19 OR FILTLVL>0) !(MAPID>160 MAPID<164) !SHOP]: {%NAME%}
 
@@ -3135,8 +3135,8 @@ ItemDisplay[rkey (TOWN)]: %NAME%{%CORAL%Pathfinding%WHITE%/%TEAL%Map Reading %WH
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
 ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>5) !SHOP]:
-ItemDisplay[cqv MAG !ID FILTLVL>5 LVLREQ<45]:
-ItemDisplay[aqv MAG !ID FILTLVL>5 LVLREQ<45]:
+ItemDisplay[cqv MAG !ID FILTLVL>0 CLVL>19]:
+ItemDisplay[aqv MAG !ID FILTLVL>0 CLVL>19]:
 ItemDisplay[(aqv OR cqv) RARE AMAZON !ID]: %DOT-A8%%TIER-7%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling, and New PD2 Throwing Potions
@@ -3187,7 +3187,6 @@ ItemDisplay[RUNE~20-25]: %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]{%N
 ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 
 //All Charms
-ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID FILTLVL>0 CLVL>49 (ILVL<40 LVLREQ<21)]: {%NAME%}
 ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 ItemDisplay[cm2 MAG !ID FILTLVL<6]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 ItemDisplay[cm2 MAG !ID FILTLVL>5]: %DOT-1C%%PX-9B%%TIER-5%%GRAY%*%BLUE%   %NAME%   %GRAY%*
@@ -3345,7 +3344,6 @@ ItemDisplay[SET !ID (FILTLVL<4 OR (CLVL<80 AND FILTLVL<6))]: %PX-84%%NAME%%CONTI
 ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%r%ORANGE%a%YELLOW%in%GREEN%b%BLUE%o%PURPLE%w     %NAME%%PURPLE%     r%BLUE%a%GREEN%in%YELLOW%b%ORANGE%o%RED%w
 
 //Highlight Good Magic items
-ItemDisplay[jew MAG !ID FILTLVL>3 (ILVL<40 AND LVLREQ<18)]: {%NAME%}%CONTINUE%
 ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %NAME%%WHITE%   *%TAN%*%BLUE%
 
 //Highlight Good Rare items
@@ -3415,10 +3413,10 @@ ItemDisplay[BAR BARBARIAN RARE !ID]: %NAME%
 ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN RARE !ID]: %NAME%
 
 //Hide Magic Ring and Amulets on Super Strict Level
-ItemDisplay[(rin OR amu) MAG !ID FILTLVL>7 (ILVL<90 LVLREQ<45)]: {%NAME%}
+ItemDisplay[(rin OR amu) MAG !ID FILTLVL>0 CLVL>19]: {%NAME%}
 
 //Circlets
-ItemDisplay[CIRC MAG !ID FILTLVL>7 LVLREQ<45]: {%NAME%}
+ItemDisplay[CIRC MAG !ID FILTLVL>0 CLVL>19]: {%NAME%}
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
 
 //Rare Gloves, Belts and Boots
